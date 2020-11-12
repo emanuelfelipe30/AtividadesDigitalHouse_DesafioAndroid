@@ -1,4 +1,4 @@
-package br.com.desafiodigitalhouse.digitalhousefoods
+package br.com.desafiodigitalhouse.digitalhousefoods.splashscreen.view
 
 import android.content.Intent
 import android.os.Build
@@ -8,6 +8,8 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
+import br.com.desafiodigitalhouse.digitalhousefoods.MainActivity
+import br.com.desafiodigitalhouse.digitalhousefoods.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
