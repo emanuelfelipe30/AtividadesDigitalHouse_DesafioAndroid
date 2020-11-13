@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import br.com.desafiodigitalhouse.digitalhousefoods.R
 import br.com.desafiodigitalhouse.digitalhousefoods.register.view.RegisterActivity
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.view.RestaurantListActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -53,6 +54,8 @@ class LoginFragment : Fragment() {
 
         btnLogin.setOnClickListener {
 
+            var isValid = true
+
             val email = edtEmailLogin.text.toString()
             val password = edtPasswordLogin.text.toString()
 
@@ -60,18 +63,27 @@ class LoginFragment : Fragment() {
 
             if (!email.matches(emailPattern.toRegex())) {
                 inputLayoutEmailLogin.error = getString(R.string.email_error)
+                isValid = false
             } else {
                 inputLayoutEmailLogin.error = null
             }
 
             if (password.length < 6) {
                 inputLayoutPasswordLogin.error = getString(R.string.password_error)
+                isValid = false
             } else {
                 inputLayoutPasswordLogin.error = null
+            }
+
+            if(isValid){
+                val intent = Intent(view.context, RestaurantListActivity::class.java)
+                startActivity(intent)
             }
         }
 
         btnNavigateToRegisterScreen.setOnClickListener {
+            edtEmailLogin.setText("")
+            edtPasswordLogin.setText("")
             val intent = Intent(view.context, RegisterActivity::class.java)
             startActivity(intent)
         }

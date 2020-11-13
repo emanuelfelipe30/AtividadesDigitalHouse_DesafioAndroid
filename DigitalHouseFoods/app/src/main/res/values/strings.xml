@@ -16,4 +16,6 @@
     <string name="passwords_error">Passwords must be the same</string>
     <string name="account_created">Account successfully created</string>
     <string name="repeat_password">Repeat password</string>
+    <string name="restaurant_image">restaurant image</string>
+    <string name="closes_at">closes at %s</string>
 </resources>
