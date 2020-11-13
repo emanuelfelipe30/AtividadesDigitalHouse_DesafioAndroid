@@ -1,5 +1,6 @@
 package br.com.desafiodigitalhouse.digitalhousefoods.meal.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -53,9 +54,8 @@ class MealListFragment : Fragment() {
         val manager = GridLayoutManager(myView.context, 2)
 
         val mealListAdapter = MealListListAdapter(mealList) {
-            /*val intent = Intent(myView.context, RestaurantDetailsActivity::class.java)
-            intent.putExtra("ID", it.id)
-            startActivity(intent)*/
+            val intent = Intent(myView.context, MealDetailsActivity::class.java)
+            startActivity(intent)
         }
 
         recyclerView.apply {

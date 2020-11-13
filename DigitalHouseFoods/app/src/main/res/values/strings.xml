@@ -19,4 +19,7 @@
     <string name="restaurant_image">restaurant image</string>
     <string name="closes_at">closes at %s</string>
     <string name="main_course">Main course</string>
+    <string name="meal_name">"Salada com molho Gengibre"</string>
+    <string name="meal_description">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.
+</string>
 </resources>

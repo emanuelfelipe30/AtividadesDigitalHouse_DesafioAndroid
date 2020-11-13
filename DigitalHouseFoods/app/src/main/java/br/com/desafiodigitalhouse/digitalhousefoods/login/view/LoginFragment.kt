@@ -52,6 +52,9 @@ class LoginFragment : Fragment() {
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
         val btnNavigateToRegisterScreen = view.findViewById<Button>(R.id.btnNavigateToRegisterScreen)
 
+        edtEmailLogin.setText("")
+        edtPasswordLogin.setText("")
+
         btnLogin.setOnClickListener {
 
             var isValid = true
@@ -82,8 +85,6 @@ class LoginFragment : Fragment() {
         }
 
         btnNavigateToRegisterScreen.setOnClickListener {
-            edtEmailLogin.setText("")
-            edtPasswordLogin.setText("")
             val intent = Intent(view.context, RegisterActivity::class.java)
             startActivity(intent)
         }
