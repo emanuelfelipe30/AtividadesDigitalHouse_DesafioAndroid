@@ -1,5 +1,6 @@
 package br.com.desafiodigitalhouse.digitalhousefoods.login.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import br.com.desafiodigitalhouse.digitalhousefoods.R
+import br.com.desafiodigitalhouse.digitalhousefoods.register.view.RegisterActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -47,6 +49,8 @@ class LoginFragment : Fragment() {
         val edtPasswordLogin = view.findViewById<TextInputEditText>(R.id.edtPasswordLogin)
 
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
+        val btnNavigateToRegisterScreen = view.findViewById<Button>(R.id.btnNavigateToRegisterScreen)
+
         btnLogin.setOnClickListener {
 
             val email = edtEmailLogin.text.toString()
@@ -65,6 +69,11 @@ class LoginFragment : Fragment() {
             } else {
                 inputLayoutPasswordLogin.error = null
             }
+        }
+
+        btnNavigateToRegisterScreen.setOnClickListener {
+            val intent = Intent(view.context, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
         return view
