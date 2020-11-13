@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="16dp"
     android:paddingBottom="16dp"
-    tools:context=".restaurantlist.view.RestaurantListFragment">
+    tools:context=".restaurant.view.RestaurantListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/restaurantList"

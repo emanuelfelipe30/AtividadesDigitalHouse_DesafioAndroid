@@ -1,4 +1,4 @@
-package br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.view
+package br.com.desafiodigitalhouse.digitalhousefoods.restaurant.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

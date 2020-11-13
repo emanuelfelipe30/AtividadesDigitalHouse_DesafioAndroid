@@ -1,13 +1,13 @@
-package br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.viewmodel
+package br.com.desafiodigitalhouse.digitalhousefoods.restaurant.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.model.Restaurant
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.repository.RestaurantRepository
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.model.Restaurant
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.repository.RestaurantRepository
 
 @Suppress("UNCHECKED_CAST")
-class RestaurantViewModel(
+class RestaurantListViewModel(
     private val repository: RestaurantRepository
 ): ViewModel() {
 
@@ -19,11 +19,11 @@ class RestaurantViewModel(
         }
     }
 
-    class RestaurantViewModelFactory(
+    class RestaurantListViewModelFactory(
         private val repository: RestaurantRepository
     ): ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return RestaurantViewModel(repository) as T
+            return RestaurantListViewModel(repository) as T
         }
 
     }

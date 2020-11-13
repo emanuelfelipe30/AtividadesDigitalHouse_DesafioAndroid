@@ -1,5 +1,6 @@
-package br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.view
+package br.com.desafiodigitalhouse.digitalhousefoods.restaurant.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,14 +11,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.desafiodigitalhouse.digitalhousefoods.R
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.model.Restaurant
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.repository.RestaurantRepository
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.viewmodel.RestaurantViewModel
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.model.Restaurant
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.repository.RestaurantRepository
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.viewmodel.RestaurantListViewModel
 
 class RestaurantListFragment : Fragment() {
 
-    lateinit var myView: View
-    lateinit var viewModel: RestaurantViewModel
+    private lateinit var myView: View
+    private lateinit var viewModel: RestaurantListViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +38,8 @@ class RestaurantListFragment : Fragment() {
 
         viewModel = ViewModelProvider(
             this,
-            RestaurantViewModel.RestaurantViewModelFactory(RestaurantRepository())
-        ).get(RestaurantViewModel::class.java)
+            RestaurantListViewModel.RestaurantListViewModelFactory(RestaurantRepository())
+        ).get(RestaurantListViewModel::class.java)
 
         viewModel.restaurantListData.observe(viewLifecycleOwner, Observer{
             createList(it)
@@ -53,7 +54,9 @@ class RestaurantListFragment : Fragment() {
         val manager = LinearLayoutManager(myView.context)
 
         val restaurantListAdapter = RestaurantListAdapter(restaurantList) {
-
+            val intent = Intent(myView.context, RestaurantDetailsActivity::class.java)
+            intent.putExtra("ID", it.id)
+            startActivity(intent)
         }
 
         recyclerView.apply {

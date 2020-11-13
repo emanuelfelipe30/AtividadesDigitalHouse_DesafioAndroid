@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".restaurantlist.view.RestaurantListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".restaurant.view.RestaurantDetailsActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.view.RestaurantListActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".splashscreen.view.SplashActivity"
             android:screenOrientation="portrait"

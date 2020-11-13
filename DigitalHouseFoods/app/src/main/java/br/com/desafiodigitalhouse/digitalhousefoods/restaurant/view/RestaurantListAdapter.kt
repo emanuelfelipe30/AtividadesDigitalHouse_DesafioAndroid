@@ -1,10 +1,10 @@
-package br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.view
+package br.com.desafiodigitalhouse.digitalhousefoods.restaurant.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.desafiodigitalhouse.digitalhousefoods.R
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.model.Restaurant
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.model.Restaurant
 
 class RestaurantListAdapter(private val dataSet: List<Restaurant>, private val listener: (Restaurant) -> Unit):
     RecyclerView.Adapter<RestaurantViewHolder>() {

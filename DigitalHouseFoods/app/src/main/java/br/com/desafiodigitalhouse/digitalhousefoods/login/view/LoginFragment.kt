@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import br.com.desafiodigitalhouse.digitalhousefoods.R
 import br.com.desafiodigitalhouse.digitalhousefoods.register.view.RegisterActivity
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.view.RestaurantListActivity
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.view.RestaurantListActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 

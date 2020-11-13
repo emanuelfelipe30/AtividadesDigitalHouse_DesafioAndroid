@@ -1,13 +1,11 @@
-package br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.view
+package br.com.desafiodigitalhouse.digitalhousefoods.restaurant.view
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.desafiodigitalhouse.digitalhousefoods.R
-import br.com.desafiodigitalhouse.digitalhousefoods.restaurantlist.model.Restaurant
+import br.com.desafiodigitalhouse.digitalhousefoods.restaurant.model.Restaurant
 import com.squareup.picasso.Picasso
 
 class RestaurantViewHolder(view: View): RecyclerView.ViewHolder(view) {
