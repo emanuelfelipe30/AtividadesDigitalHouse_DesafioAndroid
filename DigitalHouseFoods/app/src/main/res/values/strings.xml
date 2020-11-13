@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">DigitalHouseFoods</string>
     <string name="imagem_da_splash_screen">imagem da splash screen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="password">Password</string>
+    <string name="log_in">LOG IN</string>
+    <string name="or">OR</string>
+    <string name="register">REGISTER</string>
+    <string name="email_error">Enter a valid email address</string>
+    <string name="password_error">Password must be at least 6 characters</string>
 </resources>

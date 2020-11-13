@@ -8,7 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
-import br.com.desafiodigitalhouse.digitalhousefoods.MainActivity
+import br.com.desafiodigitalhouse.digitalhousefoods.login.view.LoginActivity
 import br.com.desafiodigitalhouse.digitalhousefoods.R
 
 class SplashActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
         setActivityToFullScreen()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 4000)
